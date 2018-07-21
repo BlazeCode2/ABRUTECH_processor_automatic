@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at clock_control.v(17): object "_10MHz" differs only in case from object "_10mhz" in the same scope
+Info (10281): Verilog HDL Declaration information at clock_control.v(17): object "_25MHz" differs only in case from object "_25mhz" in the same scope

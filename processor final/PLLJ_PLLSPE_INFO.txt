@@ -1,0 +1,5 @@
+PLL_Name	clock_control:clk_cntrl|pll_25mhz:_50MHz_to_25MHz|altpll:altpll_component|pll_25mhz_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

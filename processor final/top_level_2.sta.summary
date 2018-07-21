@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -25.870
+TNS   : -1146.098
+
+Type  : Slow 1200mV 85C Model Setup 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -15.211
+TNS   : -954.114
+
+Type  : Slow 1200mV 85C Model Setup 'user_addr_control[16]'
+Slack : -13.700
+TNS   : -94.171
+
+Type  : Slow 1200mV 85C Model Setup 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : -4.349
+TNS   : -29.863
+
+Type  : Slow 1200mV 85C Model Setup 'in_Clock'
+Slack : -0.719
+TNS   : -0.719
+
+Type  : Slow 1200mV 85C Model Setup 'debouncer:clock_mode_button|button_out'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'user_addr_control[16]'
+Slack : -2.488
+TNS   : -15.475
+
+Type  : Slow 1200mV 85C Model Hold 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.741
+TNS   : -26.764
+
+Type  : Slow 1200mV 85C Model Hold 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.361
+TNS   : -4.087
+
+Type  : Slow 1200mV 85C Model Hold 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : 0.239
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'in_Clock'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debouncer:clock_mode_button|button_out'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'user_addr_control[16]'
+Slack : -3.000
+TNS   : -184.647
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debouncer:clock_mode_button|button_out'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'in_Clock'
+Slack : 9.755
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.584
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 49.587
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -22.337
+TNS   : -998.310
+
+Type  : Slow 1200mV 0C Model Setup 'user_addr_control[16]'
+Slack : -12.782
+TNS   : -87.658
+
+Type  : Slow 1200mV 0C Model Setup 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -11.743
+TNS   : -823.048
+
+Type  : Slow 1200mV 0C Model Setup 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : -4.101
+TNS   : -28.114
+
+Type  : Slow 1200mV 0C Model Setup 'in_Clock'
+Slack : -0.553
+TNS   : -0.553
+
+Type  : Slow 1200mV 0C Model Setup 'debouncer:clock_mode_button|button_out'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'user_addr_control[16]'
+Slack : -2.213
+TNS   : -14.463
+
+Type  : Slow 1200mV 0C Model Hold 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.715
+TNS   : -24.531
+
+Type  : Slow 1200mV 0C Model Hold 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.369
+TNS   : -3.718
+
+Type  : Slow 1200mV 0C Model Hold 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'in_Clock'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debouncer:clock_mode_button|button_out'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'user_addr_control[16]'
+Slack : -3.000
+TNS   : -160.179
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debouncer:clock_mode_button|button_out'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'in_Clock'
+Slack : 9.744
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.512
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 49.519
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -7.716
+TNS   : -559.367
+
+Type  : Fast 1200mV 0C Model Setup 'user_addr_control[16]'
+Slack : -6.641
+TNS   : -45.164
+
+Type  : Fast 1200mV 0C Model Setup 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -3.263
+TNS   : -491.964
+
+Type  : Fast 1200mV 0C Model Setup 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : -1.821
+TNS   : -12.445
+
+Type  : Fast 1200mV 0C Model Setup 'in_Clock'
+Slack : -0.224
+TNS   : -0.224
+
+Type  : Fast 1200mV 0C Model Setup 'debouncer:clock_mode_button|button_out'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'user_addr_control[16]'
+Slack : -1.576
+TNS   : -10.388
+
+Type  : Fast 1200mV 0C Model Hold 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.553
+TNS   : -20.753
+
+Type  : Fast 1200mV 0C Model Hold 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.374
+TNS   : -7.060
+
+Type  : Fast 1200mV 0C Model Hold 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : 0.056
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'in_Clock'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'debouncer:clock_mode_button|button_out'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'user_addr_control[16]'
+Slack : -3.000
+TNS   : -86.707
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debouncer:clock_mode_button|button_out'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'processor:Processor|state_machine:SM|STATE[1]'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'in_Clock'
+Slack : 9.441
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.562
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_cntrl|_50MHz_to_25MHz|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 49.577
+TNS   : 0.000
+
+------------------------------------------------------------

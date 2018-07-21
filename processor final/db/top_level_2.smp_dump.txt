@@ -1,0 +1,41 @@
+
+State Machine - |top_level_module|Automatic_controller:Auto|STATE
+Name STATE.IDLE_DAT STATE.IDLE_INS STATE.TRANSMIT STATE.PROCESS STATE.LOAD_DAT STATE.000 
+STATE.000 0 0 0 0 0 0 
+STATE.LOAD_DAT 0 0 0 0 1 1 
+STATE.PROCESS 0 0 0 1 0 1 
+STATE.TRANSMIT 0 0 1 0 0 1 
+STATE.IDLE_INS 0 1 0 0 0 1 
+STATE.IDLE_DAT 1 0 0 0 0 1 
+
+State Machine - |top_level_module|uart_tx:transmitter|r_SM_Main
+Name r_SM_Main.s_TX_START_BIT_0 r_SM_Main.s_CLEANUP3 r_SM_Main.s_CLEANUP2 r_SM_Main.s_CLEANUP r_SM_Main.s_TX_STOP_BIT r_SM_Main.s_TX_DATA_BITS r_SM_Main.s_TX_START_BIT r_SM_Main.000 
+r_SM_Main.000 0 0 0 0 0 0 0 0 
+r_SM_Main.s_TX_START_BIT 0 0 0 0 0 0 1 1 
+r_SM_Main.s_TX_DATA_BITS 0 0 0 0 0 1 0 1 
+r_SM_Main.s_TX_STOP_BIT 0 0 0 0 1 0 0 1 
+r_SM_Main.s_CLEANUP 0 0 0 1 0 0 0 1 
+r_SM_Main.s_CLEANUP2 0 0 1 0 0 0 0 1 
+r_SM_Main.s_CLEANUP3 0 1 0 0 0 0 0 1 
+r_SM_Main.s_TX_START_BIT_0 1 0 0 0 0 0 0 1 
+
+State Machine - |top_level_module|Data_retriever:retriever|STATE
+Name STATE.00 STATE.DONE STATE.TRANSMITTING 
+STATE.00 0 0 0 
+STATE.TRANSMITTING 1 0 1 
+STATE.DONE 1 1 0 
+
+State Machine - |top_level_module|uart_rx:reciever|r_SM_Main
+Name r_SM_Main.s_RX_STOP_BIT r_SM_Main.s_RX_DATA_BITS r_SM_Main.s_RX_START_BIT r_SM_Main.000 r_SM_Main.s_CLEANUP 
+r_SM_Main.000 0 0 0 0 0 
+r_SM_Main.s_RX_START_BIT 0 0 1 1 0 
+r_SM_Main.s_RX_DATA_BITS 0 1 0 1 0 
+r_SM_Main.s_RX_STOP_BIT 1 0 0 1 0 
+r_SM_Main.s_CLEANUP 0 0 0 1 1 
+
+State Machine - |top_level_module|Data_writer:writer|STATE
+Name STATE.DONE STATE.STORING2 STATE.STORING1 STATE.00 
+STATE.00 0 0 0 0 
+STATE.STORING1 0 0 1 1 
+STATE.STORING2 0 1 0 1 
+STATE.DONE 1 0 0 1 
