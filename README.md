@@ -19,6 +19,8 @@ RISC, not all instructions are of equal length, but are either 1, 2 or 4 bytes l
 
 ABRUTECH works with an 8-bit wide, 262144-bit (512x512) deep data memory and an 8-bit wide 256-bit deep instruction memory, both of which can be loaded through UART. The system was coded in Verilog HDL using Intel Quartus II Prime and implemented successfully on an Altera de2-115 development board. 
 
+![ISA](Documentation/Images/Processor-complete.jpg)
+
 While being an 8-bit processor, (bus sizes and most register sizes being 8-bit), ABRUTECH features a 12-bit ALU and accumulator, which allows it to process calculations with intermediate steps that give results up to 4096, without causing an overow error. The ALU is also designed to perform round-o divisions (unlike the typical oor division), to improve accuracy.
 
 Our processor also features a special module called Address Maker, which (optionally) allows the programmer to navigate a 512 x 512 matrix either row wise or column wise, without the need of a complex algorithm. This helps in implementing image processing algorithms such as downsampling, nearest neighbor upsampling, upsampling by bilinear interpolation. 
@@ -55,8 +57,8 @@ While being optimized to process square images, the qualities of a generic proce
 
 Implementation of each of these algorithms resulted in a sum of squared difference (SSD) error of zero, which shows the accuracy of our FPGA implementation.
 
-![ISA](Documentation/Images/Down_by_3.png)
+![ISA](Documentation/Images/Down_by_3.PNG)
 ![ISA](Documentation/Images/Bilinear_upsampple.png)
 ![ISA](Documentation/Images/Custom_filter.png)
-![ISA](Documentation/Images/Edge_detection waterfall.png)
+![ISA]('Documentation/Images/Edge_detection waterfall.png')
 
