@@ -10,7 +10,9 @@ With only 16 instructions each of which execute in only 2.2 clocks cycles on ave
 write programs quickly that take only 1.8 bytes of memory per instruction on average.
 
 Our ISA was designed to incorporate advantageous features from both RISC and CISC instruction sets. As in RISC, each operation is designed to perform a specific task, especially the load and store operations are maintained strictly separate. However, unlike
-RISC, not all instructions are of equal length, but are either 1, 2 or 4 bytes long. Certain instructions are encoded, resulting in high code density. This allows building smaller programs that use the limited instruction memory eciently while also allowing faster execution. However, this is balanced with maintaining moderate hardware level complexity in our system architecture.
+RISC, not all instructions are of equal length, but are either 1, 2 or 4 bytes long. Certain instructions are encoded, resulting in high code density. This allows building smaller programs that use the limited instruction memory efficiently while also allowing faster execution. However, this is balanced with maintaining moderate hardware level complexity in our system architecture.
+
+![ISA](Documentation/Images/Instruction_Set.png)
 
 # Architecture
 
