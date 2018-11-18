@@ -57,7 +57,7 @@ While being optimized to process square images, the qualities of a generic proce
 
 Implementation of each of these algorithms resulted in a sum of squared difference (SSD) error of zero, which shows the accuracy of our FPGA implementation.
 
-![Downsampling](Documentation/Images/Down_by_3.PNG)
+![Downsampling](Documentation/Images/Downsampple_By_3.png)
 ![Upsampling](Documentation/Images/Bilinear_upsampple.png)
 ![Custom Filter](Documentation/Images/Custom_filter.png)
 ![Edge Detect](Documentation/Images/edge.png)
