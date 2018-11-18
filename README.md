@@ -19,7 +19,7 @@ RISC, not all instructions are of equal length, but are either 1, 2 or 4 bytes l
 
 ABRUTECH works with an 8-bit wide, 262144-bit (512x512) deep data memory and an 8-bit wide 256-bit deep instruction memory, both of which can be loaded through UART. The system was coded in Verilog HDL using Intel Quartus II Prime and implemented successfully on an Altera de2-115 development board. 
 
-![ISA](Documentation/Images/Processor-complete.jpg)
+![Architecture](Documentation/Images/Processor-complete.jpg)
 
 While being an 8-bit processor, (bus sizes and most register sizes being 8-bit), ABRUTECH features a 12-bit ALU and accumulator, which allows it to process calculations with intermediate steps that give results up to 4096, without causing an overow error. The ALU is also designed to perform round-o divisions (unlike the typical oor division), to improve accuracy.
 
@@ -31,17 +31,17 @@ Another special feature in ABRUTECH is a bank of shift registers, which help to 
 
 We also built a corresponding python based compiler program, which scans the excel sheet where ISA is specied and translates the algorithm written in the human language to an array of binary values, which are then sent to the instruction memory through UART. The compiler identifies syntax errors, which allows the programmer to write assembly code with ease, using our ISA.
 
-![ISA](Documentation/Images/4_Program.png)
+![Compiler](Documentation/Images/4_Program.PNG)
 
 In addition to the compiler, we also built a simulator software for ABRUTECH. The simulator can run the algorithm like the processor and show the values of registers and memory at each step, helping us debug an algorithm fast and remotely, without repeatedly loading it into the processor.
 
-![ISA](Documentation/Images/5_Simulate.png)
+![Simulator](Documentation/Images/5_Simulate.PNG)
 
 # Algorithms
 
 As detailed in the report, we devised brand new algorithms for downsampling and other tasks, which are mathematically justified (in the report) to have better accuracy and speed than traditional algorithms. 
 
-![ISA](Documentation/Images/pointers.png)
+![Algorithms](Documentation/Images/pointers.PNG)
 
 # Hardware Debugging Features
 
@@ -49,7 +49,7 @@ The system itself is implemented with hardware debugging features, such as the a
 
 Our processor is also free of major hardware vulnerabilities, such as spectre and meltdown since we did not have the time to implement the branch prediction and speculative execution modules.
 
-![ISA](Documentation/Images/board_layout.png)
+![Board](Documentation/Images/board_layout.png)
 
 # Results
 
@@ -57,8 +57,8 @@ While being optimized to process square images, the qualities of a generic proce
 
 Implementation of each of these algorithms resulted in a sum of squared difference (SSD) error of zero, which shows the accuracy of our FPGA implementation.
 
-![ISA](Documentation/Images/Down_by_3.PNG)
-![ISA](Documentation/Images/Bilinear_upsampple.png)
-![ISA](Documentation/Images/Custom_filter.png)
-![ISA]('Documentation/Images/Edge_detection waterfall.png')
+![Downsampling](Documentation/Images/Down_by_3.PNG)
+![Upsampling](Documentation/Images/Bilinear_upsampple.png)
+![Custom Filter](Documentation/Images/Custom_filter.png)
+![Edge Detect]('Documentation/Images/Edge_detection waterfall.png')
 
