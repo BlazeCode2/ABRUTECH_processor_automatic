@@ -1,0 +1,106 @@
+TOGL
+DECR
+    [ART, AWT]
+INCR
+    [AC]
+STAC : TO_MAT
+INCR
+    [AWG]
+STAC : TO_MAT     # [0], [1] are set to 1
+COPY
+    [AC-> G0, K0] # G0,K0 = 1
+RSET
+    [AWG]
+$gotoG0 RSET            ##################### GOTO CURRENT PRIME
+            [AC]
+        COPY
+            [AC->K1]
+        $checkP COPY
+                    [K1 -> AC]
+                INCR
+                    [AC]
+                INCR
+                    [ARG, AWG]
+                COPY
+                    [AC -> K1]
+                SUBT : G0
+        JUMP: NZ_AC
+            [checkP]    #-------------------- ARG = AWG = G0 = (current prime)
+        $nextP  INCR    ##################### Find Next Prime
+                    [ARG, AWG]
+                COPY
+                    [G0 -> AC]
+                INCR
+                    [AC]
+                COPY
+                    [AC -> G0]
+                LODK
+                    [255]
+                SUBT: G0
+JUMP: Z_AC
+    [end]
+                LOAD: FROM_MAT
+                COPY
+                    [MDDR -> AC]
+        JUMP: NZ_AC
+            [nextP]    #---------------------- ARG = AWG = G0 = (next prime)
+        $nxtMul RSET
+                    [AC]
+                COPY
+                    [AC -> K1]
+                $chkMul COPY
+                            [K1-> AC]
+                        INCR
+                            [AC, ARG, AWG]
+                    JUMP: NZ_ARG
+                        [nD]
+        JUMP: J
+            [gotoG0]
+                    $nD COPY
+                            [AC->K1]
+                        SUBT: G0
+                JUMP: NZ_AC
+                    [chkMul]
+                INCR
+                    [AC]
+                STAC : TO_MAT
+        JUMP: J
+            [nxtMul]
+$end    CLAC
+COPY
+    [AC->all]
+RSET
+    [all]
+DECR
+    [ART]
+LODK
+    [255]
+COPY
+    [AC->K0]
+RSET
+    [AC]
+INCR
+    [AC]
+COPY
+    [AC->K1]
+$count  INCR
+            [ARG]
+        LOAD :FROM_MAT
+        COPY
+            [MDDR->AC]
+        JUMP: NZ_AC
+            [nP]
+                COPY
+                    [K1->AC]
+                STAC: TO_MAT
+                INCR
+                    [AWG]
+    $nP COPY
+            [K1->AC]
+        INCR
+            [AC]
+        COPY
+            [AC->K1]
+        SUBT: K0
+JUMP: NZ_AC
+    [count]

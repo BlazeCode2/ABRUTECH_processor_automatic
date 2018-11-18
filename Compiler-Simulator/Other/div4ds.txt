@@ -1,0 +1,30 @@
+$row            RSET
+                    [AWG]
+    $pixel 	    LOAD: FROM_MAT				
+                COPY				
+                    [MDDR -> AC]
+                INCR 	
+                    [ART]			
+                LOAD: FROM_MAT	
+                ADD : MDDR
+                INCR
+                    [ARG]
+                LOAD: FROM_MAT	
+                ADD : MDDR
+                DECR
+                    [ART]
+                LOAD: FROM_MAT	
+                ADD : MDDR
+                DIV
+                    [4]
+                STAC: TO_MAT		
+                INCR 	
+                    [ARG, AWG]
+        JUMP: NZ_ARG 
+            [pixel]				
+        INCR
+            [ART, AWT]
+        INCR
+            [ART]
+JUMP: NZ_ART
+    [row]

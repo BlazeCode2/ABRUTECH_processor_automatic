@@ -1,0 +1,46 @@
+ $tLoop TOGL
+        $rLoop  LOAD : FROM_MAT
+                COPY 
+                    [MDDR -> G0]
+                COPY 
+                    [MDDR -> G0]
+                INCR
+                    [ARG]
+                LOAD : FROM_MAT
+                COPY 
+                    [MDDR -> G0,AC]
+                ADD : G1
+                ADD : G1
+                ADD : G2
+                DIV
+                    [4]
+                INCR
+                    [AWG, ARG]
+                $pLoop  LOAD : FROM_MAT
+                        COPY 
+                            [MDDR -> G0, AC]
+                        ADD : G1
+                        ADD : G1
+                        ADD : G2
+                        DIV
+                            [4]
+                        STAC :TO_MAT
+                        INCR
+                            [AWG,ARG]
+                JUMP: NZ_ARG
+                    [pLoop]
+                COPY
+                    [G0 -> AC]
+                ADD : G0
+                ADD : G1
+                DIV
+                    [4]
+                STAC :TO_MAT
+                INCR
+                    [AWG, AWT, ART]
+        JUMP: NZ_ART
+            [rLoop]
+JUMP: Z_TOG
+    [tLoop]
+DECR
+    [AWG, AWT]

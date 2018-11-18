@@ -1,0 +1,43 @@
+ $part2     TOGL 
+            RSET
+                [all]
+            LODK
+                [255]
+            COPY
+                [AC -> K0]
+            $row    RSET
+                        [AC]
+                    COPY
+                        [AC -> K0]
+                    $countLoop  INCR
+                                    [K0,ARG]
+                                JUMP : NZ_K0
+                                    [countLoop]
+                    LOAD: FROM_MAT                          # [255] -> MDDR
+                    COPY
+                        [MDDR -> G0]                        # G0 = [255]
+                    $intpl  COPY
+                                [G0 -> AC]          # AC = [255]                    AC  = [254] 
+                            DECR
+                                [AWG]               # AWG = 511                     AWG = 509
+                            STAC: TO_MAT            # [511] = [255]                 [509] = [254]
+                            DECR
+                                [ARG, AWG]          # ARG = 254, AWG = 510          ARG = 253, AWG = 508
+                            LOAD: FROM_MAT          # [254] -> MDDR                 [253] -> MDDR
+                            COPY
+                                [MDDR -> G0,AC]     # G0 = AC = [254]               G0 = AC = [253]
+                            ADD
+                                [G1]                
+                            DIV
+                                [2]                 # AC    = avg([254], [255])     AC    = avg([253], [254])
+                            STAC: TO_MAT            # [510] = avg([254], [255])     [508] = avg([254], [255])
+                            JUMP: NZ_ARG
+                                [intpl]
+                    INCR
+                        [AWT, ART] # AWT, ART = 1
+                    JUMP: NZ_ART
+                        [row]
+            JUMP : Z_TOG
+                [part2]
+DECR
+[AWT,AWG]

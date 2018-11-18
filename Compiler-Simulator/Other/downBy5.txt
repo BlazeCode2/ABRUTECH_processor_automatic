@@ -1,0 +1,37 @@
+LADD : TO_AR
+    [510,0]
+
+
+LODK
+    [5]
+COPY
+    [AC -> K0]
+$part2  TOGL
+        $loop           RSET
+                            [AC]
+                        COPY
+                            [AC -> K0]
+                        $add    LOAD : FROM_MAT
+                                ADD  : MDDR
+                                INCR
+                                    [ARG, K0]
+                                JUMP : NZ_K0
+                                    [add]
+                        DIV
+                            [5]
+                        STAC : TO_MAT
+                        INCR
+                            [ARG, AWG]
+                JUMP: NZ_ARG
+                    [loop]
+                INCR
+                    [ART, AWT]
+                RSET
+                    [AWG]
+        JUMP: NZ_ART
+            [loop]
+JUMP: Z_TOG
+    [part2]
+LADD: TO_AW
+    [102,102]
+

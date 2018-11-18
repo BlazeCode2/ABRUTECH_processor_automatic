@@ -1,0 +1,58 @@
+ $part2     TOGL 
+            RSET
+                [all]
+            LODK
+                [255]
+            COPY
+                [AC -> K0]
+            $row    RSET
+                        [AC]
+                    COPY
+                        [AC -> K0]
+                    $countLoop  INCR
+                                    [K0, ARG]
+                                JUMP : NZ_K0
+                                    [countLoop]
+                    INCR
+                        [ARG]
+                    $spacingPixel   DECR
+                                        [ARG, AWG]              # Now AWT = 0   AWG = 511; ART = 0   ARG = 255
+                                    LOAD: FROM_MAT
+                                    COPY
+                                        [MDDR -> AC]
+                                    STAC :TO_MAT
+                                    DECR
+                                        [AWG]
+                                    STAC :TO_MAT
+                                    JUMP: NZ_ARG
+                                        [spacingPixel]
+                    INCR
+                        [AWT, ART]                              # AWT, ART = 1
+                    JUMP: NZ_ART
+                        [row]
+            RSET
+                [all]
+            $intpl  INCR
+                        [ARG]
+                    LOAD : FROM_MAT
+                    COPY
+                        [MDDR -> AC]
+                    INCR
+                        [ARG,AWG]
+                    LOAD: FROM_MAT
+                    ADD: MDDR
+                    DIV
+                        [2]
+                    STAC : TO_MAT
+                    INCR
+                        [AWG]
+                    JUMP : NZ_ARG
+                     [intpl]
+                INCR
+                    [ART, AWT]
+                JUMP: NZ_ART
+                    [intpl]
+            JUMP : Z_TOG
+                [part2]
+DECR
+[AWT,AWG]
