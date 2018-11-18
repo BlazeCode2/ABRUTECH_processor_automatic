@@ -41,7 +41,7 @@ In addition to the compiler, we also built a simulator software for ABRUTECH. Th
 
 As detailed in the report, we devised brand new algorithms for downsampling and other tasks, which are mathematically justified (in the report) to have better accuracy and speed than traditional algorithms. 
 
-![Algorithms](Documentation/Images/pointers.PNG)
+![Algorithms](Documentation/Images/Pointers.PNG)
 
 # Hardware Debugging Features
 
