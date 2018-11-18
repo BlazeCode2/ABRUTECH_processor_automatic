@@ -4,6 +4,8 @@ The major challenge in designing a processor is the trade-off between the size o
 
 This is demonstrated in the results section, with sample programs that are only 30-40 bytes long but are able to downsample and upsample any 512x512 image by any integer, detect edges, find prime numbers and Fibonacci numbers. . . etc.
 
+![Architecture](Documentation/Images/Processor-complete.jpg)
+
 # ISA
 
 With only 16 instructions each of which execute in only 2.2 clocks cycles on average, our ISA and the complier allow the programmer to
@@ -18,8 +20,6 @@ RISC, not all instructions are of equal length, but are either 1, 2 or 4 bytes l
 # Architecture
 
 ABRUTECH works with an 8-bit wide, 262144-bit (512x512) deep data memory and an 8-bit wide 256-bit deep instruction memory, both of which can be loaded through UART. The system was coded in Verilog HDL using Intel Quartus II Prime and implemented successfully on an Altera de2-115 development board. 
-
-![Architecture](Documentation/Images/Processor-complete.jpg)
 
 While being an 8-bit processor, (bus sizes and most register sizes being 8-bit), ABRUTECH features a 12-bit ALU and accumulator, which allows it to process calculations with intermediate steps that give results up to 4096, without causing an overow error. The ALU is also designed to perform round-o divisions (unlike the typical oor division), to improve accuracy.
 
@@ -60,5 +60,5 @@ Implementation of each of these algorithms resulted in a sum of squared differen
 ![Downsampling](Documentation/Images/Down_by_3.PNG)
 ![Upsampling](Documentation/Images/Bilinear_upsampple.png)
 ![Custom Filter](Documentation/Images/Custom_filter.png)
-![Edge Detect]('Documentation/Images/Edge_detection waterfall.png')
+![Edge Detect](Documentation/Images/edge.png)
 
