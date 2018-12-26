@@ -1,0 +1,10 @@
+LOAD	: FROM_MAT			# This is a comment
+RSET
+	[all]
+COPY						# Can write to many
+	[AC -> MDDR, K0, G0]	# 	registers at once
+INCR						# Can increment many
+	[K0, AC, ART, ARG]	# 	registers at once
+$loop1		STAC : TO_MAT		# Loops names are replaced
+		JUMP : NZ_ART		# 	with line numbers
+			[loop1]	# 	by the compiler

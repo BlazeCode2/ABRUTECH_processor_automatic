@@ -1,0 +1,11 @@
+$part2			CLAC
+				COPY
+					[AC -> all]			#ARG = i, ART = j, AWG = r, T = c; all zeros at beginning, ZT = 0
+				RSET
+					[all]
+				TOGL				#First run: (ZT 0 --> 1: MDAR = ART,ARG) 	#Second run: (ZT --> 0: MDAR = ARG,ART)
+	$rloop	RSET
+				[AWG]				#r = 0             
+			$ploop	LOAD				#First run: (ZT 0 --> 1: MDAR = ART,ARG) 	#Second run: (ZT --> 0: MDAR = ARG,ART)
+					COPY
+						[MDDR -> AC]

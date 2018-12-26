@@ -1,0 +1,29 @@
+$part2			RSET 
+					[all]
+				COPY
+					[AC -> all]			
+				TOGL				
+	$rloop	RSET
+				[AWG]				            
+			$ploop	LOAD: FROM_MAT				
+					COPY				
+						[MDDR -> AC]
+					INCR 	
+						[ARG]			
+					LOAD: FROM_MAT	
+					ADD : MDDR			
+					DIV
+						[2]
+					STAC: TO_MAT		
+					INCR 	
+						[ARG, AWG]
+			JUMP: NZ_ARG 
+				[ploop]				
+			INCR
+				[ART, AWT]				
+	JUMP: NZ_ART
+		[rloop]						
+JUMP: Z_TOG
+	[part2]
+LADD: TO_AW
+	[130815]

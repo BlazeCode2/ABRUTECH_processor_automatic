@@ -1,0 +1,10 @@
+LODK
+    [13]
+MVAC
+    [K0]
+CLAC
+STAC
+INCR
+    [AC]
+MVAC
+    [G0]

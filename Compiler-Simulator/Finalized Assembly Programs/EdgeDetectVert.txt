@@ -1,0 +1,33 @@
+        $row    LOAD: FROM_MAT
+                COPY
+                    [MDDR -> G0]
+                COPY
+                    [MDDR -> G0]
+                INCR
+                    [ARG]
+                LOAD : FROM_MAT
+                COPY
+                    [MDDR -> AC, G0]
+                SUBT : G2
+                STAC : TO_MAT
+                INCR
+                    [AWG, ARG]
+                $pixel  LOAD: FROM_MAT
+                        COPY
+                            [MDDR -> AC, G0]
+                        SUBT : G2
+                        STAC : TO_MAT
+                        INCR
+                            [AWG, ARG]
+                JUMP: NZ_ARG
+                    [pixel]
+                COPY
+                    [G0 -> AC]
+                SUBT : G2
+                STAC : TO_MAT
+                INCR
+                    [AWG, AWT, ART]
+        JUMP: NZ_ART
+            [row]
+DECR
+    [AWG,AWT]
